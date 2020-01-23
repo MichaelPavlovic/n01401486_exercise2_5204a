@@ -150,6 +150,14 @@
     <Compile Include="Migrations\202001151608501_Core_Concepts.designer.cs">
       <DependentUpon>202001151608501_Core_Concepts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001162236378_groomer.cs" />
+    <Compile Include="Migrations\202001162236378_groomer.designer.cs">
+      <DependentUpon>202001162236378_groomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001162307548_owner.cs" />
+    <Compile Include="Migrations\202001162307548_owner.designer.cs">
+      <DependentUpon>202001162307548_owner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\GroomBooking.cs" />
     <Compile Include="Models\Groomer.cs" />
@@ -229,6 +237,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001151608501_Core_Concepts.resx">
       <DependentUpon>202001151608501_Core_Concepts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001162236378_groomer.resx">
+      <DependentUpon>202001162236378_groomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001162307548_owner.resx">
+      <DependentUpon>202001162307548_owner.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
