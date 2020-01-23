@@ -1,0 +1,7 @@
+Species can have many pets that belong to that species.
+Owners can have many pets.
+Owners, Pets, and Groomers can have many Bookings.
+A Booking can have many Services (ex. you get your dog's hair cut and 
+they also bath and clip the dog's nails).
+A Groomer can perform many Services and Services can be performed 
+by many Groomers.
