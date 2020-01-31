@@ -10,18 +10,6 @@ namespace PetGrooming.Models
 {
     public class Owner
     {
-        /*
-            An owner is someone who owns one or more pets
-            Some things that describe an owner:
-                - First Name
-                - Last Name
-                - Address
-                - Phone Number (work)
-                - Phone Number (home)
-
-            An owner must reference a list of pets
-            
-        */
         public int OwnerID { get; set; }
         public string OwnerFName { get; set; }
         public string OwnerLName { get; set; }
@@ -29,6 +17,7 @@ namespace PetGrooming.Models
         public string OwnerHomePhone { get; set; }
         public string OwnerWorkPhone { get; set; }
 
+        //representing one owner to many pets
         public ICollection<Pet> Pets { get; set; }
     }
 }

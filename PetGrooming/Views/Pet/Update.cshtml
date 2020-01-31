@@ -5,6 +5,7 @@
 
 <h2>Update</h2>
 
+<!--TODO: add proper formatting-->
 <form action="/Pet/Update/@Model.pet.PetID" method="POST">
     <span>Pet Name</span><input type="text" value="@Model.pet.PetName" id="PetName" name="PetName" /><br />
     <span>Pet Color</span><input type="text" value="@Model.pet.Color" id="PetColor" name="PetColor" /><br />
@@ -12,6 +13,7 @@
     <span>Pet Species: </span>
     <select id="SpeciesID" name="SpeciesID">
         @{
+            <!--rendering loop to provide a list of species-->
             foreach (var species in Model.species)
             {
                 var selected = "";

@@ -11,17 +11,7 @@ namespace PetGrooming.Models
 {
     public class Pet
     {
-        /*
-            A pet is an animal that receives the grooming that the owner pays for
-            Some things that describe a pet:
-                - Name
-                - Weight
-                - Species
-                - Color
-                - Special Notes
-
-            A Pet must reference a Species
-        */
+        
         [Key]
         public int PetID { get; set; }
         public string PetName { get; set; }

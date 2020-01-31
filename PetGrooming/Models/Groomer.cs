@@ -10,17 +10,6 @@ namespace PetGrooming.Models
 {
     public class Groomer
     {
-        /* 
-            A groomer is someone who is employed to groom pets
-            Some things that describe a groomer
-                - First Name
-                - Last Name
-                - Date of Birth
-                - Phone Number
-                - Hourly Rate
-
-            A booking must reference to a groomer
-        */
         public int GroomerID { get; set; }
         public string GroomerFName { get; set; }
         public string GroomerLName { get; set; }

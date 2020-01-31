@@ -47,7 +47,7 @@ namespace PetGrooming.Controllers
         // GET: Pet
         public ActionResult List()
         {
-            //How could we modify this to include a search bar?
+            //modify to include search functionality
             List<Pet> pets = db.Pets.SqlQuery("Select * from Pets").ToList();
             return View(pets);
 
@@ -116,14 +116,15 @@ namespace PetGrooming.Controllers
 
         public ActionResult Update(int id)
         {
-            //need information about a particular pet
+            //get pet info
             Pet selectedpet = db.Pets.SqlQuery("select * from pets where petid = @id", new SqlParameter("@id", id)).FirstOrDefault();
-            //need information about all species
+            //get species info
             List<Species> species = db.Species.SqlQuery("select * from species").ToList();
 
             UpdatePet viewmodel = new UpdatePet();
             viewmodel.pet = selectedpet;
             viewmodel.species = species;
+
 
             return View(viewmodel);
         }
@@ -131,7 +132,7 @@ namespace PetGrooming.Controllers
         [HttpPost]
         public ActionResult Update(int id, string PetName, string PetColor, double PetWeight, int SpeciesID, string PetNotes)
         {
-
+            //debug line
             Debug.WriteLine("Editing pet's name to " + PetName + " and change the weight to " + PetWeight.ToString());
 
             //logic for updating the pet in the database goes here
@@ -145,18 +146,23 @@ namespace PetGrooming.Controllers
             sqlparams[4] = new SqlParameter("@PetNotes", PetNotes);
             sqlparams[5] = new SqlParameter("@id", id);
 
+            //execute query
             db.Database.ExecuteSqlCommand(query, sqlparams);
 
+            //go back to list of pets
             return RedirectToAction("List");
         }
 
         public ActionResult Delete(int id)
         {
+            //create query
             string query = "delete from pets where petid=@id";
             SqlParameter sqlparam = new SqlParameter("@id", id);
 
+            //execute query
             db.Database.ExecuteSqlCommand(query, sqlparam);
 
+            //go back to list of pets
             return RedirectToAction("List");
         }
 
