@@ -6,6 +6,14 @@
 
 <h2>Show Pet</h2>
 
-<div>Name : @Model.PetName</div>
-<div>Weight : @Model.Weight</div>
-<div>Species : @Model.Species.Name</div>
+<a href="/Pet/List">Back to List</a>
+
+<div>Name: @Model.PetName</div>
+<div>Weight: @Model.Weight</div>
+<div>Species: @Model.Species.Name</div><!--TODO: link to the species show page-->
+<div>Color: @Model.Color</div>
+<div>Notes: @Model.Notes</div>
+<div>
+    <a href="/Pet/Update/@Model.PetID">Update</a>
+    <a href="/Pet/Delete/@Model.PetID" onclick="if(!confirm('Are you sure you want to delete this?')) return false;">Delete</a>
+</div>

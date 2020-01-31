@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+
+<a href="/Species/List">Back to List</a>
+
+<div>@Model.Name</div>
+<div>
+    <a href="/Species/Update/@Model.SpeciesID">Update</a>
+    <a href="/Species/Delete/@Model.SpeciesID" onclick="if(!confirm('Are you sure you want to delete this?')) return false;">Delete</a>
+
+    <!--TODO: list all pets that are of the corresponding species-->
+</div>

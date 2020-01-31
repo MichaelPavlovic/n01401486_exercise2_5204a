@@ -158,6 +158,10 @@
     <Compile Include="Migrations\202001162307548_owner.designer.cs">
       <DependentUpon>202001162307548_owner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001310133393_species.cs" />
+    <Compile Include="Migrations\202001310133393_species.designer.cs">
+      <DependentUpon>202001310133393_species.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\GroomBooking.cs" />
     <Compile Include="Models\Groomer.cs" />
@@ -165,6 +169,7 @@
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\Pet.cs" />
     <Compile Include="Models\Species.cs" />
+    <Compile Include="Models\ViewModels\UpdatePet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -205,12 +210,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Pet\Show.cshtml" />
     <Content Include="Views\Pet\List.cshtml" />
-    <Content Include="Views\Pet\Add.cshtml" />
     <Content Include="Views\Pet\Update.cshtml" />
+    <Content Include="Views\Species\Add.cshtml" />
+    <Content Include="Views\Species\List.cshtml" />
+    <Content Include="Views\Species\Show.cshtml" />
+    <Content Include="Views\Species\Update.cshtml" />
+    <Content Include="Views\Pet\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Species\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -243,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001162307548_owner.resx">
       <DependentUpon>202001162307548_owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001310133393_species.resx">
+      <DependentUpon>202001310133393_species.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

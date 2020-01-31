@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2 id="heading">List</h2>
+
+<div id="add">
+    <a href="/Species/Add">Add New Species</a>
+</div>
+<!--add search functionality-->
+@{
+    foreach (var species in @Model)
+    {
+
+        <div>
+            <a href="/Species/Show/@species.SpeciesID">@species.Name</a>
+        </div>
+    }
+}

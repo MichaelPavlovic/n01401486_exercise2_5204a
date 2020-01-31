@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<form method="POST" action="/Species/Update/@Model.SpeciesID">
+    Species Name: <input type="text" name="SpeciesName" id="SpeciesName" value="@Model.Name" />
+    <div>
+        <input type="submit" value="Update Species" />
+        <a href="/Species/List">Cancel</a>
+    </div>
+</form>
